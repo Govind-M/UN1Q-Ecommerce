@@ -1,0 +1,1866 @@
+{
+  "users": [
+    {
+      "name": "latestuser",
+      "email": "latestuser@gmail.com",
+      "password": "latestpassword",
+      "gender": "male",
+      "role": "user",
+      "isBlocked": false,
+      "createdAt": "2026-04-02T07:00:16.551Z",
+      "id": "aX8477C-qO0"
+    },
+    {
+      "name": "john wick",
+      "email": "johnwick@gmail.com",
+      "password": "johnwickpass1",
+      "gender": "male",
+      "role": "user",
+      "isBlocked": true,
+      "createdAt": "2026-04-02T07:07:59.163Z",
+      "id": "eJiF7Y-_dSk",
+      "phone": "1234567889",
+      "avatar": ""
+    },
+    {
+      "name": "belarina",
+      "email": "belarina@gmail.com",
+      "password": "belarinapass",
+      "gender": "female",
+      "role": "user",
+      "isBlocked": false,
+      "createdAt": "2026-04-02T07:10:01.798Z",
+      "id": "mDU7yjg50_I"
+    },
+    {
+      "name": "Alen K Daniel",
+      "email": "alen@gmail.com",
+      "password": "alenpassword",
+      "gender": "prefer_not",
+      "role": "user",
+      "isBlocked": false,
+      "createdAt": "2026-04-13T03:18:02.993Z",
+      "id": "h1Ob8mFE7Rs"
+    },
+    {
+      "name": "Alfin",
+      "email": "alfin@gmail.com",
+      "password": "alfinpassword",
+      "gender": "male",
+      "role": "user",
+      "isBlocked": false,
+      "createdAt": "2026-04-13T04:53:19.668Z",
+      "id": "Jm3X1JpygeI"
+    },
+    {
+      "name": "Alen4",
+      "email": "alen4@gmail.com",
+      "password": "alen4password",
+      "gender": "male",
+      "role": "user",
+      "isBlocked": false,
+      "createdAt": "2026-04-13T06:09:42.838Z",
+      "id": "2-cF9AqO4wc"
+    },
+    {
+      "name": "alen5",
+      "email": "alen5@gmail.com",
+      "password": "alen5password",
+      "gender": "male",
+      "role": "user",
+      "isBlocked": false,
+      "createdAt": "2026-04-13T06:15:10.681Z",
+      "id": "knOka8aRl7A"
+    },
+    {
+      "name": "Govind M",
+      "email": "govindm@gmail.com",
+      "password": "govindmpassword",
+      "gender": "male",
+      "role": "user",
+      "isBlocked": false,
+      "createdAt": "2026-04-13T06:35:42.393Z",
+      "id": "GtpR65rOoqc"
+    },
+    {
+      "name": "Mathews",
+      "email": "mathew@gmail.com",
+      "password": "mathewpassword",
+      "gender": "male",
+      "role": "user",
+      "isBlocked": false,
+      "createdAt": "2026-04-13T06:51:34.419Z",
+      "id": "9VqsWovmxzk"
+    },
+    {
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "adminpassword",
+      "gender": "male",
+      "role": "admin",
+      "isBlocked": false,
+      "createdAt": "2026-04-02T07:00:16.551Z",
+      "id": "aX8477C-qO0"
+    },
+    {
+      "name": "dom",
+      "email": "dom@gmail.co,",
+      "password": "123456",
+      "gender": "male",
+      "role": "user",
+      "isBlocked": false,
+      "createdAt": "2026-04-21T09:44:17.891Z",
+      "id": "P8YrNgAZrJw"
+    }
+  ],
+  "filters": {
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL",
+      "3XL"
+    ],
+    "brands": [
+      "UN1Q",
+      "UN1Q HeavyDuty@1.0",
+      "UN1Q Air"
+    ],
+    "colors": [
+      "Black",
+      "White",
+      "Navy",
+      "Grey",
+      "Olive",
+      "Beige",
+      "Red",
+      "Blue",
+      "Green",
+      "Brown",
+      "Maroon",
+      "Orange",
+      "Yellow",
+      "Pink",
+      "Purple"
+    ],
+    "fits": [
+      "Oversized Fit",
+      "Regular Fit",
+      "Straight Fit",
+      "Baggy Fit",
+      "Loose Fit",
+      "Detachable Hood",
+      "Classic Fit",
+      "Wide Leg Fit"
+    ],
+    "sleeves": [
+      "Half Sleeve",
+      "Full Sleeve",
+      "Sleeveless"
+    ],
+    "offers": [
+      "Buy 2 for 1199",
+      "Buy 3 for 1199"
+    ],
+    "discounts": [
+      "10%",
+      "20%",
+      "30%",
+      "40%",
+      "50%"
+    ],
+    "shoeSizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10"
+    ],
+    "shoeDiscounts": [
+      "30%",
+      "40%",
+      "50%"
+    ],
+    "bagTypes": [
+      "Backpack",
+      "Sling Bag",
+      "Duffle Bag",
+      "Laptop Bag",
+      "Gym Bag"
+    ],
+    "capTypes": [
+      "Snapback",
+      "Baseball Cap",
+      "Bucket Hat",
+      "Beanie",
+      "Dad Cap"
+    ]
+  },
+  "men_topwear": [
+    {
+      "id": "1",
+      "name": "Men's Dark Grey Cotton Shirt",
+      "type": "Shirt",
+      "brand": "UN1Q Air",
+      "color": "Grey",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Regular Fit",
+      "sleeve": "Full Sleeve",
+      "price": 1499,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t640/men-s-dark-grey-cotton-linen-shirt-677613-1753957562-1.jpg",
+      "category": "Topwear",
+      "categoryId": "men_topwear",
+      "gender": "men",
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "name": "Men's Sage Green Cotton Linen Shirt",
+      "type": "Shirt",
+      "brand": "UN1Q",
+      "color": "Green",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Regular Fit",
+      "sleeve": "Full Sleeve",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t640/men-s-sage-green-cotton-linen-shirt-677623-1753957983-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "3",
+      "name": "Men's White & Rust Orange Checked Oversized Shirt",
+      "type": "Shirt",
+      "brand": "UN1Q",
+      "color": "Orange",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Full Sleeve",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t640/694332_2025-12-17t10-49-38_1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "4",
+      "name": "Men's Grey Oversized Cargo Shirt",
+      "type": "Shirt",
+      "brand": "UN1Q",
+      "color": "Green",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Full Sleeve",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t640/men-s-grey-oversized-cargo-shirt-662095-1752736018-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "5",
+      "name": "Men's Peach Textured Oversized Shirt",
+      "type": "Shirt",
+      "brand": "UN1Q",
+      "color": "Pink",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Half Sleeve",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t640/1003949_2026-04-08t06-56-46_1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "6",
+      "name": "Men's Peach Textured Oversized Shirt",
+      "type": "Shirt",
+      "brand": "UN1Q",
+      "color": "White",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Regular Fit",
+      "sleeve": "Full Sleeve",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t640/1500953_2026-04-01t13-00-23_1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "7",
+      "name": "Men's Light Brown Oversized Cotton Linen Detachable Hooded Shirt",
+      "type": "Shirt",
+      "brand": "UN1Q",
+      "color": "Brown",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Detachable Hood",
+      "sleeve": "Full Sleeve",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t640/1004041_2026-04-02t05-18-48_1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "8",
+      "name": "Men's Mustard Yellow Embroidered Oversized Shirt",
+      "type": "Shirt",
+      "brand": "UN1Q",
+      "color": "Yellow",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Half Sleeve",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t640/687612_2026-02-11t12-26-45_1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "9",
+      "name": "Men's Aqua Blue Oversized Cotton Linen Detachable Hooded Shirt",
+      "type": "Shirt",
+      "brand": "UN1Q",
+      "color": "Blue",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Detachable Hood",
+      "sleeve": "Full Sleeve",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t640/1004042_2026-04-02t05-18-54_1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "10",
+      "name": "Men's Jet Black Cotton Linen Shirt",
+      "type": "Shirt",
+      "brand": "UN1Q",
+      "color": "Black",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Regular Fit",
+      "sleeve": "Full Sleeve",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t640/1500950_2026-04-01t12-51-17_1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "11",
+      "name": "Men's Chocolate Brown Corduroy Jacket",
+      "type": "Jacket",
+      "brand": "UN1Q",
+      "color": "Brown",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Regular Fit",
+      "sleeve": "Full Sleeve",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t640/men-s-chocolate-brown-corduroy-jacket-684914-1762777074-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "12",
+      "name": "Men's Dark Olive Green Corduroy Jacket",
+      "type": "Jacket",
+      "brand": "UN1Q",
+      "color": "Green",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Regular Fit",
+      "sleeve": "Full Sleeve",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t640/men-s-dark-olive-green-corduroy-jacket-684912-1762777079-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "13",
+      "name": "Men's Green Corduroy Jacket",
+      "type": "Jacket",
+      "brand": "UN1Q",
+      "color": "Green",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Regular Fit",
+      "sleeve": "Full Sleeve",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t640/men-s-green-corduroy-jacket-691925-1762777070-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "14",
+      "name": "Iron Man: Mark L",
+      "type": "TShirt",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Brown",
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Half Sleeve",
+      "price": 699,
+      "discount": "10%",
+      "offer": "Buy 2 for 1199",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1756978102_1866003.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "15",
+      "name": "Avatar: Fire Bender",
+      "type": "TShirt",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Brown",
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Half Sleeve",
+      "price": 699,
+      "discount": "10%",
+      "offer": "Buy 2 for 1199",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1753767817_4169791.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "16",
+      "name": "Punisher: Classic Logo",
+      "type": "TShirt",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Black",
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Half Sleeve",
+      "price": 699,
+      "discount": "10%",
+      "offer": "Buy 2 for 1199",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1744474322_3081028.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "name": "Men's Blue Marvel Moon Knight Graphic Printed T-shirt",
+      "brand": "UN1Q Air",
+      "categoryId": "men_topwear",
+      "category": "Topwear",
+      "price": 1300,
+      "image": "https://images.bewakoof.com/t1080/men-s-blue-marvel-moon-knight-graphic-printed-t-shirt-483814-1755083362-1.jpg",
+      "type": "TShirt",
+      "color": "Black",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "fit": "Oversized Fit",
+      "discount": "30%",
+      "offer": null,
+      "status": "active",
+      "id": "aeLGv4tp8qs"
+    },
+    {
+      "name": "sample1",
+      "brand": "UN1Q",
+      "categoryId": "men_topwear",
+      "category": "Topwear",
+      "price": 1000,
+      "image": "https://images.bewakoof.com/t1080/men-s-blue-marvel-moon-knight-graphic-printed-t-shirt-483814-1755083362-1.jpg",
+      "type": "Tshirt",
+      "color": "Black",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "fit": "Regular Fit",
+      "discount": "10",
+      "offer": null,
+      "status": "active",
+      "id": "qvC4U9hRXOA",
+      "gender": "men"
+    }
+  ],
+  "men_bottomwear": [
+    {
+      "id": "1",
+      "name": "Super Pants: Black",
+      "type": "Pants",
+      "brand": "UN1Q",
+      "color": "Black",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Classic Fit",
+      "price": 1399,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1773476443_2804359.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "name": "Gurkha Pants: Granite",
+      "type": "Pants",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Black",
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "fit": "Straight Fit",
+      "price": 1199,
+      "discount": "10%",
+      "offer": null,
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1773728391_6002898.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "3",
+      "name": "Cargo Pants: Anchor Blue",
+      "type": "Cargo Pants",
+      "brand": "UN1Q Air",
+      "color": "Blue",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Straight Fit",
+      "price": 899,
+      "discount": "30%",
+      "offer": "Buy 2 for 1199",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1768906184_7953235.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "4",
+      "name": "Easy Pants: Walnut Brown",
+      "type": "Chinos",
+      "brand": "UN1Q Air",
+      "color": "Brown",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Classic Fit",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1772445881_8033238.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "5",
+      "name": "Batman: Dark Knight",
+      "type": "Men Cargo Joggers",
+      "brand": "UN1Q Air",
+      "color": "Black",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Classic Fit",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1726325221_8023580.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "6",
+      "name": "Solids: Brown",
+      "type": "Men Oversized Joggers",
+      "brand": "UN1Q Air",
+      "color": "Brown",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Oversized Fit",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1775029011_6689389.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "7",
+      "name": "Solids: Stone Grey",
+      "type": "Men Cargo Joggers",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Grey",
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Baggy Fit",
+      "price": 799,
+      "discount": "40%",
+      "offer": "Buy 3 for 1199",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1771479276_3162701.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "8",
+      "name": "Korean Joggers: Ash Grey",
+      "type": "Korean Joggers",
+      "brand": "UN1Q Air",
+      "color": "Grey",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "fit": "Regular Fit",
+      "price": 999,
+      "discount": "50%",
+      "offer": null,
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1730887963_6001168.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "9",
+      "name": "TSS Originals: Space Time",
+      "type": "Men Parachute Pants",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Blue",
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Baggy Fit",
+      "price": 799,
+      "discount": "40%",
+      "offer": "Buy 3 for 1199",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1748061710_5831013.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "10",
+      "name": "Korean Joggers: Off White",
+      "type": "Korean Joggers",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "White",
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Baggy Fit",
+      "price": 799,
+      "discount": "40%",
+      "offer": "Buy 3 for 1199",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1775450413_5924210.jpg?w=480&dpr=2",
+      "status": "active"
+    }
+  ],
+  "men_shoes": [
+    {
+      "id": "1",
+      "name": "Iron Man : Arc Reactor",
+      "brand": "UN1Q",
+      "color": "Orange",
+      "size": [
+        "UK 6",
+        "UK 7",
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "price": 2499,
+      "discount": "30%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1773836826_9840533.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "name": "Urban Blaze: Tokyo",
+      "brand": "UN1Q Air",
+      "color": "White",
+      "size": [
+        "UK 6",
+        "UK 7",
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "price": 2999,
+      "discount": "40%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1772108706_7142264.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "3",
+      "name": "Men's Yellow Kill Bill Color Block Suede Leather Low-Top Sneakers",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Brown",
+      "size": [
+        "UK 6",
+        "UK 7",
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "price": 1999,
+      "discount": "50%",
+      "image": "https://images.bewakoof.com/t1080/1003838_2026-02-06t13-24-23_1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "4",
+      "name": "Men's Maroon & Black Deadpool Color Block High Top Sneakers",
+      "brand": "UN1Q Air",
+      "color": "Red",
+      "size": [
+        "UK 6",
+        "UK 7",
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "price": 2999,
+      "discount": "40%",
+      "image": "https://images.bewakoof.com/t1080/men-s-maroon-black-deadpool-color-block-high-top-sneakers-630669-1722845944-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "5",
+      "name": "Men's Black & Red Akatsuki Color Block High Top Sneakers",
+      "brand": "UN1Q Air",
+      "color": "Red",
+      "size": [
+        "UK 6",
+        "UK 7",
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "price": 2999,
+      "discount": "40%",
+      "image": "https://images.bewakoof.com/t1080/men-s-black-red-akatsuki-color-block-high-top-sneakers-630683-1720528499-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "6",
+      "name": "Men's Green & Black Kakashi Color Block High Top Sneakers",
+      "brand": "UN1Q Air",
+      "color": "Green",
+      "size": [
+        "UK 6",
+        "UK 7",
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "price": 2999,
+      "discount": "40%",
+      "image": "https://images.bewakoof.com/t1080/men-s-green-black-kakashi-color-block-high-top-sneakers-630679-1718781621-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "7",
+      "name": "Daredevil: Hell's Knight Men High Top Sneakers",
+      "brand": "UN1Q Air",
+      "color": "Red",
+      "size": [
+        "UK 6",
+        "UK 7",
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "price": 2999,
+      "discount": "40%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1773817945_2288904.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "8",
+      "name": "Batman: The Dark Knight 2.0 Men High Top Sneakers",
+      "brand": "UN1Q Air",
+      "color": "Black",
+      "size": [
+        "UK 6",
+        "UK 7",
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "price": 2999,
+      "discount": "40%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1764409343_7588229.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "9",
+      "name": "Punisher: Vigilante Men High Top Sneakers",
+      "brand": "UN1Q Air",
+      "color": "Black",
+      "size": [
+        "UK 6",
+        "UK 7",
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "price": 2999,
+      "discount": "40%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1741089105_6834387.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "10",
+      "name": "Naruto: Konoha High Top Men High Top Sneakers",
+      "brand": "UN1Q Air",
+      "color": "Black",
+      "size": [
+        "UK 6",
+        "UK 7",
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "price": 2999,
+      "discount": "40%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1766814482_9249619.jpg?w=480&dpr=2",
+      "status": "active"
+    }
+  ],
+  "women_topwear": [
+    {
+      "id": "1",
+      "name": "Women's White Bored Typography Oversized Short Top",
+      "type": "Top",
+      "brand": "UN1Q",
+      "color": "White",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Half Sleeve",
+      "price": 899,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t1080/women-s-white-bored-typography-oversized-short-top-582038-1726571691-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "name": "Women's Pink Friends Gang Logo Graphic Printed Oversized Short Top",
+      "type": "Top",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Pink",
+      "size": [
+        "XS",
+        "S",
+        "M"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Half Sleeve",
+      "price": 599,
+      "discount": "10%",
+      "offer": "Buy 2 for 1199",
+      "image": "https://images.bewakoof.com/t1080/women-s-pink-friends-gang-logo-graphic-printed-oversized-short-top-589815-1721651493-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "3",
+      "name": "Women's Blue Striped Short Top",
+      "type": "Top",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Blue",
+      "size": [
+        "XS",
+        "S",
+        "M"
+      ],
+      "fit": "Regular Fit",
+      "sleeve": "Half Sleeve",
+      "price": 599,
+      "discount": "10%",
+      "offer": "Buy 2 for 1199",
+      "image": "https://images.bewakoof.com/t1080/1501044_2026-03-17t12-36-26_1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "4",
+      "name": "Women's Pink & White Camo Printed Oversized Short Top",
+      "type": "Top",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Pink",
+      "size": [
+        "XS",
+        "S",
+        "M"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Half Sleeve",
+      "price": 599,
+      "discount": "10%",
+      "offer": "Buy 2 for 1199",
+      "image": "https://images.bewakoof.com/t1080/women-s-pink-white-camo-printed-oversized-t-shirt-580369-1686301196-2.jpg",
+      "status": "active"
+    },
+    {
+      "id": "5",
+      "name": "Women's White Varsity Team Graphic Printed Oversized Short Top",
+      "type": "Top",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "White",
+      "size": [
+        "XS",
+        "S",
+        "M"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Half Sleeve",
+      "price": 599,
+      "discount": "10%",
+      "offer": "Buy 2 for 1199",
+      "image": "https://images.bewakoof.com/t1080/women-s-white-varsity-team-graphic-printed-oversized-short-top-603352-1719922271-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "6",
+      "name": "Women's Orange Fresh As A Daisy Graphic Printed Boyfriend T-shirt",
+      "type": "T Shirt",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Orange",
+      "size": [
+        "XS",
+        "S",
+        "M"
+      ],
+      "fit": "Regular Fit",
+      "sleeve": "Half Sleeve",
+      "price": 599,
+      "discount": "10%",
+      "offer": "Buy 2 for 1199",
+      "image": "https://images.bewakoof.com/t1080/women-s-orange-fresh-as-a-daisy-graphic-printed-boyfriend-t-shirt-638829-1738331416-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "7",
+      "name": "Women's Ginger Root Brown Coffee On The Rocks Graphic Printed Oversized T-shirt",
+      "type": "T Shirt",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Brown",
+      "size": [
+        "XS",
+        "S",
+        "M"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Half Sleeve",
+      "price": 599,
+      "discount": "10%",
+      "offer": "Buy 2 for 1199",
+      "image": "https://images.bewakoof.com/t1080/women-s-ginger-root-brown-coffee-on-the-rocks-graphic-printed-oversized-t-shirt-671238-1743579594-2.jpg",
+      "status": "active"
+    },
+    {
+      "id": "8",
+      "name": "Women's Blue Stardust Soul Graphic Printed Oversized T-shirt",
+      "type": "T Shirt",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Blue",
+      "size": [
+        "XS",
+        "S",
+        "M"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Half Sleeve",
+      "price": 599,
+      "discount": "10%",
+      "offer": "Buy 2 for 1199",
+      "image": "https://images.bewakoof.com/t1080/women-s-blue-stardust-soul-graphic-printed-oversized-t-shirt-580622-1741326029-2.jpg",
+      "status": "active"
+    },
+    {
+      "id": "9",
+      "name": "Women's Beige Coffee Typography Oversized Hoodies",
+      "type": "Hoodie",
+      "brand": "UN1Q Air",
+      "color": "Beige",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Full Sleeve",
+      "price": 1399,
+      "discount": "30%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t1080/694300_2026-01-21t07-24-47_1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "10",
+      "name": "Women's Black Graphic Printed Oversized Crop Hoodies Black",
+      "type": "Hoodie",
+      "brand": "UN1Q Air",
+      "color": "Black",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Full Sleeve",
+      "price": 1399,
+      "discount": "30%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t1080/694603_2025-12-31t09-35-18_2.jpg",
+      "status": "active"
+    },
+    {
+      "id": "11",
+      "name": "Women's Black Graphic Printed Oversized Hoodies",
+      "type": "Hoodie",
+      "brand": "UN1Q Air",
+      "color": "Black",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Oversized Fit",
+      "sleeve": "Full Sleeve",
+      "price": 1399,
+      "discount": "30%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t1080/women-s-black-graphic-printed-oversized-hoodies-651093-1735295510-1.jpg",
+      "status": "active"
+    }
+  ],
+  "women_bottomwear": [
+    {
+      "id": "1",
+      "name": "Women's Khaki Brown Straight Fit Jeans",
+      "type": "Jeans",
+      "brand": "UN1Q",
+      "color": "Brown",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "fit": "Straight Fit",
+      "price": 1299,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t1080/1004048_2026-03-26t10-48-05_1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "name": "Women's Indigo Blue Wide Leg Jeans",
+      "type": "Jeans",
+      "brand": "UN1Q",
+      "color": "Blue",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "fit": "Wide Leg Fit",
+      "price": 1299,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t1080/690786_2026-04-01t12-47-06_1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "3",
+      "name": "Women's Blue Washed Baggy Straight Fit Distressed Jeans",
+      "type": "Jeans",
+      "brand": "UN1Q",
+      "color": "Blue",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "fit": "Straight Fit",
+      "price": 1299,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t1080/women-s-blue-baggy-straight-fit-distressed-jeans-624257-1753334934-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "4",
+      "name": "Women's Black Oversized Joggers",
+      "type": "Joggers",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Black",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Oversized Fit",
+      "price": 799,
+      "discount": "30%",
+      "offer": "Buy 2 for 1199",
+      "image": "https://images.bewakoof.com/t1080/women-s-black-oversized-joggers-609829-1733917062-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "5",
+      "name": "Women's Black Super Loose Fit Joggers",
+      "type": "Joggers",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Grey",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Loose Fit",
+      "price": 799,
+      "discount": "30%",
+      "offer": "Buy 2 for 1199",
+      "image": "https://images.bewakoof.com/t1080/women-s-black-super-loose-fit-joggers-580425-1754655476-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "6",
+      "name": "Women's Black Gangstar Graphic Printed Super Loose Fit Joggers",
+      "type": "Joggers",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Grey",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "fit": "Loose Fit",
+      "price": 799,
+      "discount": "30%",
+      "offer": "Buy 2 for 1199",
+      "image": "https://images.bewakoof.com/t1080/women-s-black-gangstar-graphic-printed-super-loose-fit-joggers-584749-1756995652-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "7",
+      "name": "Women's Chocolate Brown Oversized Track Pants",
+      "type": "Track Pants",
+      "brand": "UN1Q",
+      "color": "Brown",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "fit": "Oversized Fit",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t1080/694532_2026-03-05t13-10-01_1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "8",
+      "name": "Women's Pastel Pink Textured Straight Fit Track Pants",
+      "type": "Track Pants",
+      "brand": "UN1Q",
+      "color": "Pink",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "fit": "Straight Fit",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t1080/687665_2026-02-27t06-31-24_1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "9",
+      "name": "Women's Black Typography Super Loose Fit Track Pants",
+      "type": "Track Pants",
+      "brand": "UN1Q",
+      "color": "White",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "fit": "Loose Fit",
+      "price": 999,
+      "discount": "20%",
+      "offer": null,
+      "image": "https://images.bewakoof.com/t1080/women-s-black-typography-super-loose-fit-track-pants-654847-1760533759-1.jpg",
+      "status": "active"
+    }
+  ],
+  "women_shoes": [
+    {
+      "id": "1",
+      "name": "Hello Kitty: Kuromi Women Low Top Sneakers",
+      "brand": "UN1Q",
+      "color": "Purple",
+      "size": [
+        "UK 6",
+        "UK 7",
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "price": 1999,
+      "discount": "30%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1770918710_1199544.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "name": "Milano: Cloud Women Low Top Sneakers",
+      "brand": "UN1Q Air",
+      "color": "Blue",
+      "size": [
+        "UK 6",
+        "UK 7",
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "price": 2499,
+      "discount": "40%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1760105027_7576840.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "3",
+      "name": "Urban Blaze: Lavender Women Low Top Sneakers",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Purple",
+      "size": [
+        "UK 6",
+        "UK 7",
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "price": 1799,
+      "discount": "50%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1703921049_9214507.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "4",
+      "name": "SpongeBob: Under The Sea Women Low Top Sneakers",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Yellow",
+      "size": [
+        "UK 6",
+        "UK 7",
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "price": 1799,
+      "discount": "50%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1755410005_7268808.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "5",
+      "name": "Pink Panther: Cool Cat Women Low Top Sneakers",
+      "brand": "UN1Q HeavyDuty@1.0",
+      "color": "Pink",
+      "size": [
+        "UK 6",
+        "UK 7",
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "price": 1799,
+      "discount": "50%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1769059569_2846739.jpg?w=480&dpr=2",
+      "status": "active"
+    }
+  ],
+  "bags": [
+    {
+      "id": "1",
+      "name": "Unisex Black Itachi Peace Printed Small Backpack",
+      "type": "Backpack",
+      "color": "Black",
+      "price": 1499,
+      "discount": "20%",
+      "image": "https://images.bewakoof.com/t1080/608177_2025-12-16t05-14-22_1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "name": "Pink Panther: Pink Vibe Women Backpacks",
+      "type": "Backpack",
+      "color": "Black",
+      "price": 1499,
+      "discount": "20%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1721375803_2013849.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "3",
+      "name": "Batman: Gotham Gear Mens Backpacks",
+      "type": "Backpack",
+      "color": "Black",
+      "price": 1499,
+      "discount": "20%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1746279593_8050817.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "4",
+      "name": "Black Panther: Tactical Pack Mens Backpacks",
+      "type": "Backpack",
+      "color": "Black",
+      "price": 1499,
+      "discount": "20%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1761128997_9072763.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "5",
+      "name": "Punisher: Tactical Armour Unisex Backpacks",
+      "type": "Backpack",
+      "color": "Black",
+      "price": 1499,
+      "discount": "20%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1773818212_5017226.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "6",
+      "name": "Unisex Black Bad Bunny Sling Bag",
+      "type": "Sling Bag",
+      "color": "Black",
+      "price": 799,
+      "discount": "30%",
+      "image": "https://images.bewakoof.com/t1080/unisex-black-bad-bunny-sling-bag-571780-1764054316-2.jpg",
+      "status": "active"
+    },
+    {
+      "id": "7",
+      "name": "Unisex Grey & Blue Avengers Printed Sling Bag",
+      "type": "Sling Bag",
+      "color": "Grey",
+      "price": 799,
+      "discount": "30%",
+      "image": "https://images.bewakoof.com/t1080/unisex-grey-blue-avengers-printed-sling-bag-659627-1764054591-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "8",
+      "name": "Unisex Black Unpredictable Ninja Naruto Printed Sling Bag",
+      "type": "Sling Bag",
+      "color": "Blcak",
+      "price": 799,
+      "discount": "30%",
+      "image": "https://images.bewakoof.com/t1080/unisex-black-unpredictable-ninja-naruto-printed-sling-bag-608183-1764054516-2.jpg",
+      "status": "active"
+    },
+    {
+      "id": "9",
+      "name": "Unisex Black Man Of Steel Printed Sling Bag",
+      "type": "Sling Bag",
+      "color": "black",
+      "price": 799,
+      "discount": "30%",
+      "image": "https://images.bewakoof.com/t1080/684476_2025-12-31t08-35-03_4.jpg",
+      "status": "active"
+    },
+    {
+      "id": "10",
+      "name": "Optimus Prime: Collapsible Duffle Bag",
+      "type": "Duffle Bag",
+      "color": "Navy",
+      "price": 1999,
+      "discount": "40%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1772708649_3664182.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "11",
+      "name": "Iron Man: Collapsible Duffle Bag",
+      "type": "Duffle Bag",
+      "color": "Navy",
+      "price": 1999,
+      "discount": "40%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1772708713_1243351.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "12",
+      "name": "Unisex Olive Green Battle Tested Typography Duffel Bag",
+      "type": "Duffle Bag",
+      "color": "Navy",
+      "price": 1999,
+      "discount": "40%",
+      "image": "https://images.bewakoof.com/t1080/unisex-olive-green-battle-tested-typography-duffel-bag-684486-1761216090-1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "13",
+      "name": "Unisex Black 24 X 7 365 Typography Duffel Bag",
+      "type": "Duffle Bag",
+      "color": "Navy",
+      "price": 1999,
+      "discount": "40%",
+      "image": "https://images.bewakoof.com/t1080/unisex-black-24-x-7-365-typography-duffel-bag-684487-1761540515-2.jpg",
+      "status": "active"
+    },
+    {
+      "id": "14",
+      "name": "Batman: Utility Gear",
+      "type": "Fanny Pack",
+      "color": "Black",
+      "price": 1199,
+      "discount": "50%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1773818524_6681697.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "15",
+      "name": "Punisher: Utility Gear",
+      "type": "Fanny Pack",
+      "color": "Black",
+      "price": 1199,
+      "discount": "50%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1772706026_9138697.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "16",
+      "name": "UN1Q Originals: Noir",
+      "type": "Fanny Pack",
+      "color": "Black",
+      "price": 1199,
+      "discount": "50%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1772026089_8902409.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "17",
+      "name": "UN1Q Originals: Olive",
+      "type": "Fanny Pack",
+      "color": "Black",
+      "price": 1199,
+      "discount": "50%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1737527167_8379374.jpg?w=480&dpr=2",
+      "status": "active"
+    }
+  ],
+  "caps": [
+    {
+      "id": "1",
+      "name": "Linkin Park: Logo",
+      "type": "Snapback",
+      "color": "Black",
+      "price": 499,
+      "discount": "10%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1769161039_8451218.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "name": "Stranger Things: Hawkins",
+      "type": "Baseball Cap",
+      "color": "Navy",
+      "price": 399,
+      "discount": "20%",
+      "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1767509573_6948476.jpg?w=480&dpr=2",
+      "status": "active"
+    },
+    {
+      "id": "3",
+      "name": "Unisex White & Black Not today Embroidered Baseball Cap",
+      "type": "Baseball Cap",
+      "color": "Beige",
+      "price": 449,
+      "discount": "30%",
+      "image": "https://images.bewakoof.com/t1080/694546_2026-01-28t09-47-21_3.jpg",
+      "status": "active"
+    },
+    {
+      "id": "4",
+      "name": "Unisex Black Panther Embroidered Premium Super Suede Baseball Cap",
+      "type": "Baseball Cap",
+      "color": "Grey",
+      "price": 349,
+      "discount": "20%",
+      "image": "https://images.bewakoof.com/t1080/662678_2026-02-23t12-33-05_4.jpg",
+      "status": "active"
+    },
+    {
+      "id": "5",
+      "name": "Unisex Off White Luffy Printed Baseball Cap",
+      "type": "Baseball Cap",
+      "color": "White",
+      "price": 399,
+      "discount": "40%",
+      "image": "https://images.bewakoof.com/t1080/662673_2025-12-31t08-34-32_2.jpg",
+      "status": "active"
+    }
+  ],
+  "orders": [
+    {
+      "items": [
+        {
+          "id": "2",
+          "name": "Men's Sage Green Cotton Linen Shirt",
+          "brand": "UN1Q",
+          "price": 999,
+          "discount": "20%",
+          "image": "https://images.bewakoof.com/t640/men-s-sage-green-cotton-linen-shirt-677623-1753957983-1.jpg",
+          "categoryId": "men_topwear",
+          "selectedSize": "M",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 799,
+      "shipping": 0,
+      "tax": 64,
+      "total": 863,
+      "userId": "eJiF7Y-_dSk",
+      "userName": "john wick",
+      "userEmail": "johnwick@gmail.com",
+      "status": "Processing",
+      "placedAt": "2026-03-11T04:39:57.097Z",
+      "id": "O572s-qc4ig"
+    },
+    {
+      "items": [
+        {
+          "id": "5",
+          "name": "Men's Black & Red Akatsuki Color Block High Top Sneakers",
+          "brand": "UN1Q Air",
+          "price": 2999,
+          "discount": "40%",
+          "image": "https://images.bewakoof.com/t1080/men-s-black-red-akatsuki-color-block-high-top-sneakers-630683-1720528499-1.jpg",
+          "categoryId": "men_shoes",
+          "selectedSize": "UK 8",
+          "quantity": 1
+        },
+        {
+          "id": "8",
+          "name": "Batman: The Dark Knight 2.0 Men High Top Sneakers",
+          "brand": "UN1Q Air",
+          "price": 2999,
+          "discount": "40%",
+          "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1764409343_7588229.jpg?w=480&dpr=2",
+          "categoryId": "men_shoes",
+          "selectedSize": "UK 9",
+          "quantity": 2
+        }
+      ],
+      "subtotal": 5397,
+      "shipping": 0,
+      "tax": 432,
+      "total": 5829,
+      "userId": "h1Ob8mFE7Rs",
+      "userName": "Alen K Daniel",
+      "userEmail": "alen@gmail.com",
+      "status": "Processing",
+      "placedAt": "2026-04-19T07:23:12.439Z",
+      "id": "yZo1Yxb6zKo"
+    },
+    {
+      "items": [
+        {
+          "id": "4",
+          "name": "Unisex Black Panther Embroidered Premium Super Suede Baseball Cap",
+          "price": 349,
+          "discount": "20%",
+          "image": "https://images.bewakoof.com/t1080/662678_2026-02-23t12-33-05_4.jpg",
+          "categoryId": "caps",
+          "quantity": 1
+        },
+        {
+          "id": "5",
+          "name": "Unisex Off White Luffy Printed Baseball Cap",
+          "price": 399,
+          "discount": "40%",
+          "image": "https://images.bewakoof.com/t1080/662673_2025-12-31t08-34-32_2.jpg",
+          "categoryId": "caps",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 518,
+      "shipping": 15,
+      "tax": 41,
+      "total": 574,
+      "userId": "h1Ob8mFE7Rs",
+      "userName": "Alen K Daniel",
+      "userEmail": "alen@gmail.com",
+      "status": "Processing",
+      "placedAt": "2026-02-10T17:59:33.971Z",
+      "id": "M4Njy31QvTk"
+    },
+    {
+      "items": [
+        {
+          "id": "5",
+          "name": "Batman: Dark Knight",
+          "brand": "UN1Q Air",
+          "price": 999,
+          "discount": "20%",
+          "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1726325221_8023580.jpg?w=480&dpr=2",
+          "categoryId": "men_bottomwear",
+          "selectedSize": "L",
+          "quantity": 2
+        },
+        {
+          "id": "8",
+          "name": "Men's Mustard Yellow Embroidered Oversized Shirt",
+          "brand": "UN1Q",
+          "price": 999,
+          "discount": "20%",
+          "image": "https://images.bewakoof.com/t640/687612_2026-02-11t12-26-45_1.jpg",
+          "categoryId": "men_topwear",
+          "selectedSize": "L",
+          "quantity": 2
+        }
+      ],
+      "subtotal": 3196,
+      "shipping": 15,
+      "tax": 256,
+      "total": 3467,
+      "userId": "eJiF7Y-_dSk",
+      "userName": "john wick",
+      "userEmail": "johnwick@gmail.com",
+      "status": "Processing",
+      "placedAt": "2026-01-19T18:03:41.231Z",
+      "id": "iPHDSIQEUAs"
+    },
+    {
+      "items": [
+        {
+          "id": "6",
+          "name": "Men's Peach Textured Oversized Shirt",
+          "brand": "UN1Q",
+          "price": 999,
+          "discount": "20%",
+          "image": "https://images.bewakoof.com/t640/1500953_2026-04-01t13-00-23_1.jpg",
+          "categoryId": "men_topwear",
+          "selectedSize": "L",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 799,
+      "shipping": 0,
+      "tax": 64,
+      "total": 863,
+      "userId": "Jm3X1JpygeI",
+      "userName": "Alfin",
+      "userEmail": "alfin@gmail.com",
+      "status": "Processing",
+      "placedAt": "2026-04-20T06:57:24.526Z",
+      "id": "Nnt_uYSJqfk"
+    },
+    {
+      "items": [
+        {
+          "id": "1",
+          "name": "Men's Dark Grey Cotton Shirt",
+          "brand": "UN1Q Air",
+          "price": 1499,
+          "discount": "20%",
+          "image": "https://images.bewakoof.com/t640/men-s-dark-grey-cotton-linen-shirt-677613-1753957562-1.jpg",
+          "categoryId": "men_topwear",
+          "selectedSize": "XL",
+          "quantity": 3
+        }
+      ],
+      "subtotal": 3597,
+      "shipping": 15,
+      "tax": 288,
+      "total": 3900,
+      "userId": "P8YrNgAZrJw",
+      "userName": "dom",
+      "userEmail": "dom@gmail.co,",
+      "status": "Processing",
+      "placedAt": "2026-04-21T09:48:00.833Z",
+      "id": "FZQ8AI6xftw"
+    },
+    {
+      "items": [
+        {
+          "id": "aeLGv4tp8qs",
+          "name": "Men's Blue Marvel Moon Knight Graphic Printed T-shirt",
+          "brand": "UN1Q Air",
+          "price": 1300,
+          "discount": "30%",
+          "image": "https://images.bewakoof.com/t1080/men-s-blue-marvel-moon-knight-graphic-printed-t-shirt-483814-1755083362-1.jpg",
+          "categoryId": "men_topwear",
+          "selectedSize": "M",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 910,
+      "shipping": 15,
+      "tax": 73,
+      "total": 998,
+      "userId": "h1Ob8mFE7Rs",
+      "userName": "Alen K Daniel",
+      "userEmail": "alen@gmail.com",
+      "status": "Delivered",
+      "placedAt": "2026-04-22T00:37:43.473Z",
+      "id": "bb5rWnxDs0E"
+    },
+    {
+      "items": [
+        {
+          "id": "2",
+          "name": "Gurkha Pants: Granite",
+          "brand": "UN1Q HeavyDuty@1.0",
+          "price": 1199,
+          "discount": "10%",
+          "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1773728391_6002898.jpg?w=480&dpr=2",
+          "categoryId": "men_bottomwear",
+          "selectedSize": "L",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 1079,
+      "shipping": 15,
+      "tax": 86,
+      "total": 1180,
+      "userId": "h1Ob8mFE7Rs",
+      "userName": "Alen K Daniel",
+      "userEmail": "alen@gmail.com",
+      "status": "Processing",
+      "placedAt": "2026-04-28T05:07:26.468Z",
+      "id": "h7V3HuVfy5Y"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

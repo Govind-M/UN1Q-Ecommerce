@@ -1,0 +1,47 @@
+.catToggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #f0f0f0;
+  border-radius: 999px;
+  padding: 3px;
+  gap: 0;
+}
+
+/* The amber pill that slides */
+.catSlider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  height: calc(100% - 6px);
+  border-radius: 999px;
+  background: #f5c842;
+  z-index: 0;
+  /* transition only kicks in after first render — prevents jump on mount */
+  transition: none;
+}
+
+.catSliderReady {
+  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+              width     0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Individual option buttons */
+.catOption {
+  position: relative;
+  z-index: 1;
+  padding: 5px 14px;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: color 0.18s;
+  white-space: nowrap;
+}
+
+/* .catOption.active  { color: #111; }
+.catOption:not(.active) { color: #9ca3af; }
+.catOption:not(.active):hover { color: #555; } */

@@ -1,0 +1,392 @@
+/* ── BREADCRUMB ───────────────────────────────────────────────────────────── */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 32px;
+  font-size: 12px;
+  color: #888;
+  border-bottom: 1px solid #e5e5e0;
+  background: #fafaf8;
+  flex-wrap: wrap;
+}
+.crumbLink {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.crumbLink:hover { color: #0a0a0a; }
+.crumbSep { color: #ccc; }
+.crumbCurrent { color: #0a0a0a; font-weight: 700; }
+
+/* ── LAYOUT ───────────────────────────────────────────────────────────────── */
+.layout {
+  display: flex;
+  gap: 0;
+  min-height: calc(100vh - 110px);
+  animation: fadeIn 0.35s ease both;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* ── IMAGE PANEL ──────────────────────────────────────────────────────────── */
+.imagePanel {
+  width: 50%;
+  padding: 32px 28px;
+  border-right: 1px solid #e5e5e0;
+  position: sticky;
+  top: 60px;
+  align-self: flex-start;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+.mainImgWrap {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: #f0ede8;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.mainImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.mainImgWrap:hover .mainImg { transform: scale(1.03); }
+.discLabel {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #e8b84b;
+  color: #0a0a0a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 5px 12px;
+  border-radius: 2px;
+}
+.thumbRail { display: flex; gap: 10px; }
+.thumb {
+  width: 76px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  opacity: 0.6;
+  transition: border-color 0.2s, opacity 0.2s;
+}
+.thumb:hover { border-color: #0a0a0a; opacity: 1; }
+
+/* ── INFO PANEL ───────────────────────────────────────────────────────────── */
+.infoPanel {
+  width: 50%;
+  padding: 36px 40px 60px 36px;
+  overflow-y: auto;
+}
+
+/* Badges */
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.brandBadge {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: #0a0a0a;
+  color: #e8b84b;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+.fitBadge, .typeBadge {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: #f0ede8;
+  color: #555;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+/* Product name */
+.productName {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #0a0a0a;
+  margin-bottom: 14px;
+}
+
+/* Price */
+.priceBlock {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+.priceNow {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0a0a0a;
+}
+.priceMrp {
+  font-size: 15px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+.priceSave {
+  font-size: 12px;
+  font-weight: 700;
+  color: #27803e;
+  background: #e9f7ee;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+.taxNote { font-size: 11px; color: #aaa; margin-bottom: 18px; }
+
+.divider { height: 1px; background: #e5e5e0; margin: 18px 0; }
+
+/* Offer */
+.offerTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fdf3d8;
+  border: 1px solid #e8b84b;
+  color: #c49a2e;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 14px;
+  border-radius: 3px;
+  margin-bottom: 18px;
+}
+
+/* Attributes */
+.attrRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.attrLabel {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #888;
+  min-width: 95px;
+  text-transform: uppercase;
+}
+.attrVal { font-size: 13px; font-weight: 600; color: #0a0a0a; }
+
+/* Sizes */
+.sizeSection { margin-bottom: 18px; }
+.sizeLabelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.sizeGuide {
+  font-size: 11px;
+  font-weight: 700;
+  color: #c49a2e;
+  cursor: pointer;
+  background: none;
+  border: none;
+  letter-spacing: 0.5px;
+  padding: 0;
+}
+.sizeGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 3px;
+  border-radius: 4px;
+  transition: box-shadow 0.2s;
+}
+.sizeError { box-shadow: 0 0 0 2px #d44; }
+.sizeBtn {
+  min-width: 50px;
+  height: 40px;
+  border: 1.5px solid #e5e5e0;
+  border-radius: 3px;
+  background: #fff;
+  color: #0a0a0a;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+  padding: 0 10px;
+}
+.sizeBtn:hover { border-color: #0a0a0a; }
+.sizeBtnActive { background: #0a0a0a; color: #fff; border-color: #0a0a0a; }
+.sizeHint {
+  font-size: 11px;
+  color: #d44;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* Qty */
+.qtySection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.qtyControl {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #e5e5e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.qtyBtn {
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  background: #f5f5f3;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+.qtyBtn:hover { background: #e5e5e0; }
+.qtyVal {
+  width: 46px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  border-left: 1.5px solid #e5e5e0;
+  border-right: 1.5px solid #e5e5e0;
+  height: 36px;
+  line-height: 36px;
+}
+
+/* CTAs */
+.ctaRow { display: flex; gap: 10px; margin-bottom: 22px; }
+.btnCart {
+  flex: 1;
+  padding: 14px 20px;
+  background: #0a0a0a;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.btnCart:hover { background: #222; transform: translateY(-1px); }
+.btnCart:active { transform: translateY(0); }
+.btnWish {
+  width: 50px;
+  height: 50px;
+  border: 1.5px solid #e5e5e0;
+  border-radius: 3px;
+  background: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s;
+}
+.btnWish:hover { border-color: #d44; }
+
+/* Accordion */
+.accordion { border-top: 1px solid #e5e5e0; }
+.accordionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #e5e5e0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #0a0a0a;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s;
+}
+.accordionBtn:hover { color: #c49a2e; }
+.accordionIcon { font-size: 20px; color: #aaa; }
+.accordionBody {
+  padding: 14px 0 18px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.75;
+}
+.accordionText { font-size: 13px; color: #555; line-height: 1.75; }
+
+.detailTable { width: 100%; border-collapse: collapse; }
+.detailTable td { padding: 5px 0; font-size: 13px; vertical-align: top; }
+.detailTable td:first-child { color: #aaa; width: 38%; font-weight: 600; }
+.detailTable td:last-child { color: #0a0a0a; font-weight: 600; }
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  background: #0a0a0a;
+  color: #e8b84b;
+  padding: 13px 22px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  border-left: 3px solid #e8b84b;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  animation: toastIn 0.3s ease both;
+}
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* State screens */
+.stateWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 55vh;
+  gap: 14px;
+  text-align: center;
+}
+.spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid #e5e5e0;
+  border-top-color: #e8b84b;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+.errorText { font-size: 15px; color: #c33; }
+.backBtn {
+  padding: 9px 22px;
+  background: #0a0a0a;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }

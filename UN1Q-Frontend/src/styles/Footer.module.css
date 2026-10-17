@@ -1,0 +1,82 @@
+/* ── Footer shell ────────────────────────────────────────────────────────── */
+.footer {
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 56px 24px 32px;
+  gap: 40px;
+  border-top: 1px solid #e4e4e4;
+  margin-top: 60px;
+}
+
+/* ── Brand block ─────────────────────────────────────────────────────────── */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.brandName {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #111;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 340px;
+}
+
+/* ── Shop block ──────────────────────────────────────────────────────────── */
+.shopBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.shopHeading {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #111;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+}
+
+.shopLink {
+  font-size: 13px;
+  color: #555;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+  line-height: 1;
+}
+
+.shopLink:hover {
+  color: #111;
+}
+
+/* ── Copyright ───────────────────────────────────────────────────────────── */
+.copy {
+  border-top: 1px solid #e4e4e4;
+  width: 100%;
+  padding-top: 24px;
+}
+
+.copyText {
+  font-size: 11px;
+  color: #aaa;
+  margin: 0;
+  letter-spacing: 0.02em;
+}

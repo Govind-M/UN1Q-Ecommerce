@@ -1,0 +1,356 @@
+/* ── Page shell ──────────────────────────────────────────────────────────── */
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ── Hero ────────────────────────────────────────────────────────────────── */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 48px 0 36px;
+}
+
+/* Checkmark circle */
+.checkCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.checkIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.heroTitle {
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  color: #111;
+  margin: 0 0 12px;
+  line-height: 1.05;
+}
+
+.heroSub {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.7;
+  margin: 0 0 32px;
+  max-width: 340px;
+}
+
+/* Order # and delivery date — two columns with a divider */
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 4px;
+}
+
+.metaDivider {
+  width: 1px;
+  height: 32px;
+  background: #ddd;
+}
+
+.metaItem {
+  text-align: center;
+}
+
+.metaLabel {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #aaa;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+}
+
+.metaValue {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+/* ── Body: order card + help link ────────────────────────────────────────── */
+.body {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 56px;
+}
+
+@media (max-width: 680px) {
+  .body {
+    grid-template-columns: 1fr;
+  }
+  .helpBlock {
+    display: none;
+  }
+}
+
+/* ── Order card ──────────────────────────────────────────────────────────── */
+.orderCard {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.cardTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 20px;
+  letter-spacing: -0.2px;
+}
+
+/* Item rows */
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 4px;
+}
+
+.itemRow {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.itemImg {
+  width: 64px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #f0ede8;
+  flex-shrink: 0;
+}
+
+.itemInfo {
+  flex: 1;
+}
+
+.itemName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+
+.itemMeta {
+  font-size: 11px;
+  color: #999;
+  margin: 0 0 6px;
+}
+
+.itemPrice {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+  margin: 0;
+}
+
+/* Divider */
+.cardDivider {
+  height: 1px;
+  background: #efefef;
+  margin: 16px 0;
+}
+
+/* Pricing rows */
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.free {
+  color: #333;
+  font-style: italic;
+}
+
+.totalRow {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0;
+  letter-spacing: -0.3px;
+}
+
+/* Continue shopping */
+.continueBtn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  background: #f5f5f3;
+  color: #111;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  letter-spacing: 0.01em;
+}
+
+.continueBtn:hover {
+  background: #ebebea;
+}
+
+/* ── Help block ──────────────────────────────────────────────────────────── */
+.helpBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top: 4px;
+  min-width: 160px;
+}
+
+.helpLabel {
+  font-size: 11px;
+  color: #aaa;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 140px;
+}
+
+.helpBtn {
+  font-size: 12px;
+  font-weight: 600;
+  color: #111;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.helpBtn:hover {
+  color: #555;
+}
+
+/* ── Recommendations ─────────────────────────────────────────────────────── */
+.recSection {
+  border-top: 1px solid #efefef;
+  padding-top: 40px;
+}
+
+.recEyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #aaa;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.recTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.5px;
+  margin: 0 0 24px;
+}
+
+.recGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 680px) {
+  .recGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.recCard {
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.recCard:hover {
+  transform: translateY(-3px);
+}
+
+.recImgWrap {
+  aspect-ratio: 3 / 4;
+  background: #f0ede8;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.recImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.recCard:hover .recImg {
+  transform: scale(1.04);
+}
+
+.recInfo {
+  padding: 0 2px;
+}
+
+.recName {
+  font-size: 12px;
+  font-weight: 500;
+  color: #111;
+  margin: 0 0 4px;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recPrice {
+  font-size: 12px;
+  color: #555;
+  margin: 0;
+}
+
+/* Loading state */
+.recLoading {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.recSpinner {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #eee;
+  border-top-color: #111;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,183 @@
+/* ── SECTION WRAPPER ──────────────────────────────────────────────────────── */
+.section {
+  padding: 56px 40px 72px;
+  background: #fafaf8;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 20px 52px;
+  }
+}
+
+/* ── SECTION HEADER ───────────────────────────────────────────────────────── */
+.sectionHead {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 44px;
+}
+
+.sectionTitle {
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: #0a0a0a;
+  white-space: nowrap;
+}
+
+.sectionRule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, #e8b84b 0%, transparent 100%);
+}
+
+/* ── GENDER BLOCK ─────────────────────────────────────────────────────────── */
+.genderBlock {
+  margin-bottom: 44px;
+}
+
+.genderLabel {
+  font-family: "Oswald", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: #aaa;
+  margin-bottom: 16px;
+}
+
+/* ── GRID ─────────────────────────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* Accessories only has 2 items — keep them narrower */
+.gridAccessory {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 720px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid,
+  .gridAccessory {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+/* ── CARD ─────────────────────────────────────────────────────────────────── */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  aspect-ratio: 3 / 4;
+  cursor: pointer;
+  background: #e8e5e0;
+  border: 1px solid #e5e5e0;
+
+  /* Staggered fade-up on mount */
+  animation: fadeUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.16);
+}
+
+.card:focus-visible {
+  outline: 2px solid #e8b84b;
+  outline-offset: 2px;
+}
+
+/* ── CARD IMAGE ───────────────────────────────────────────────────────────── */
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover .cardImg {
+  transform: scale(1.06);
+}
+
+/* ── OVERLAY ──────────────────────────────────────────────────────────────── */
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.02) 0%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  transition: opacity 0.3s;
+}
+
+.card:hover .cardOverlay {
+  opacity: 0.9;
+}
+
+/* ── CARD BODY (bottom text) ──────────────────────────────────────────────── */
+.cardBody {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 20px 22px;
+}
+
+.cardName {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.cardCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: #e8b84b;
+  text-transform: uppercase;
+
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover .cardCta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── ANIMATION ────────────────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

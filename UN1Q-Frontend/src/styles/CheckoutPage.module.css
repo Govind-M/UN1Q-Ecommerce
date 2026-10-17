@@ -1,0 +1,513 @@
+/* ── Breadcrumb ──────────────────────────────────────────────────────────── */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 40px;
+  font-size: 13px;
+  color: #888;
+}
+.crumbLink {
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+.crumbLink:hover { color: #111; }
+.crumbSep        { color: #ccc; }
+.crumbCurrent    { color: #111; font-weight: 500; }
+
+/* ── Page shell ──────────────────────────────────────────────────────────── */
+.pageWrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px 60px;
+}
+
+.pageTitle {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #111;
+  margin-bottom: 28px;
+}
+
+/* ── Two-column layout ───────────────────────────────────────────────────── */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+/* ── Left: stacked step cards ────────────────────────────────────────────── */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stepCard {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+/* ── Step header (number circle + title) ─────────────────────────────────── */
+.stepHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stepNum {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: -0.2px;
+  margin: 0;
+}
+
+/* ── Form fields ─────────────────────────────────────────────────────────── */
+.fieldRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.fieldHalf {
+  flex: 1;
+  min-width: 120px;
+}
+
+.fieldLabel {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.fieldInput {
+  height: 42px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #111;
+  background: #fafafa;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.fieldInput:focus {
+  border-color: #111;
+  background: #fff;
+}
+
+.fieldInput::placeholder { color: #bbb; }
+
+/* Card number wrapper — positions the inline SVG icon */
+.cardInputWrap {
+  position: relative;
+}
+.cardInputWrap .fieldInput {
+  padding-right: 40px;
+}
+.cardIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #bbb;
+  pointer-events: none;
+}
+
+/* ── Shipping method cards ───────────────────────────────────────────────── */
+.methodRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.methodCard {
+  flex: 1;
+  min-width: 160px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.methodCard:hover     { border-color: #aaa; }
+.methodCardActive     { border-color: #111; background: #fafafa; }
+
+/* Radio indicators */
+.methodRadio {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  flex-shrink: 0;
+}
+
+.methodRadioActive {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #111;
+  background: #111;
+  box-shadow: inset 0 0 0 3px #fff;
+  flex-shrink: 0;
+}
+
+.methodInfo  { flex: 1; }
+
+.methodName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  margin: 0;
+}
+
+.methodDays {
+  font-size: 12px;
+  color: #888;
+  margin: 2px 0 0;
+}
+
+.methodPrice {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* ── Payment tabs ────────────────────────────────────────────────────────── */
+.payTabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.payTab {
+  padding: 8px 16px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.payTab:hover   { border-color: #aaa; color: #111; }
+.payTabActive   { border-color: #111; background: #111; color: #fff; }
+
+.cardFields {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.altPayNote {
+  padding: 16px;
+  background: #f7f7f5;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ── Order summary panel (right column, sticky) ──────────────────────────── */
+.summary {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 24px;
+  position: sticky;
+  top: 80px;
+}
+
+.summaryTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 18px;
+  letter-spacing: -0.2px;
+}
+
+.summaryItems {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.summaryItem {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.summaryItemImg {
+  width: 56px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #f0ede8;
+  flex-shrink: 0;
+}
+
+.summaryItemInfo  { flex: 1; }
+
+.summaryItemName {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+  margin: 0 0 3px;
+  line-height: 1.3;
+}
+
+.summaryItemMeta {
+  font-size: 11px;
+  color: #888;
+  margin: 0 0 4px;
+}
+
+.summaryItemPrice {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+/* ── Coupon section inside Order Summary ─────────────────────────────────── */
+.couponBox {
+  margin-bottom: 16px;
+}
+
+.couponLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.couponForm {
+  display: flex;
+  gap: 8px;
+}
+
+.couponInput {
+  flex: 1;
+  height: 36px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 0 10px;
+  font-size: 12px;
+  color: #111;
+  text-transform: uppercase;
+  outline: none;
+  background: #fafafa;
+}
+
+.couponInput:focus {
+  border-color: #111;
+  background: #fff;
+}
+
+.applyCouponBtn {
+  height: 36px;
+  padding: 0 14px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.applyCouponBtn:hover { background: #333; }
+
+.appliedCouponPill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #15803d;
+}
+
+.removeCouponBtn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.removeCouponBtn:hover { text-decoration: underline; }
+
+.couponErrorText {
+  font-size: 11px;
+  color: #dc2626;
+  margin-top: 6px;
+}
+
+.discountRow {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.summaryDivider {
+  height: 1px;
+  background: #efefef;
+  margin: 14px 0;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.free           { color: #16a34a; font-weight: 500; }
+
+.totalRow {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0;
+  letter-spacing: -0.3px;
+}
+
+.placeOrderBtn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.placeOrderBtn:hover:not(:disabled) {
+  background: #333;
+  transform: translateY(-1px);
+}
+
+.placeOrderBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secureNote {
+  font-size: 11px;
+  color: #aaa;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* ── Order success flash ─────────────────────────────────────────────────── */
+.successWrap {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.successIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.successTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+.successSub {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #eee;
+  border-top-color: #111;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,436 @@
+/* ── OrdersPage.module.css ────────────────────────────────────────────────── */
+
+/* Page layout */
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 5rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.78rem;
+  color: #6b7280;
+  border-bottom: 1px solid #f3f4f6;
+}
+.crumbLink {
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.15s;
+}
+.crumbLink:hover { color: #111; }
+.crumbSep { color: #d1d5db; }
+.crumbCurrent { color: #111; font-weight: 500; }
+
+/* Hero */
+.pageHero {
+  padding: 2.5rem 0 2rem;
+}
+.pageTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+.pageSubtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Orders list */
+.ordersList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+/* Order card */
+.orderCard {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 1.5rem 1.75rem;
+  transition: box-shadow 0.2s;
+}
+.orderCard:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+/* Meta row */
+.orderMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.orderRef {}
+.orderRefLabel {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+  margin: 0 0 0.2rem;
+  text-transform: uppercase;
+}
+.orderRefVal {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.orderMetaRight {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+.metaCol {}
+.metaLabel {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+  text-transform: uppercase;
+  margin: 0 0 0.2rem;
+}
+.metaVal {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Bottom row: thumbnails + CTA */
+.orderBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.thumbRow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.orderThumb {
+  width: 80px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #f3f4f6;
+}
+.thumbExtra {
+  width: 80px;
+  height: 96px;
+  border-radius: 8px;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6b7280;
+}
+.viewDetailsBtn {
+  padding: 0.65rem 1.5rem;
+  background: #1f2937;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: background 0.18s, transform 0.1s;
+}
+.viewDetailsBtn:hover {
+  background: #111;
+  transform: translateY(-1px);
+}
+
+/* Empty state */
+.emptyState {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+.emptyIcon { font-size: 3rem; margin: 0 0 1rem; }
+.emptyTitle { font-size: 1.2rem; font-weight: 700; color: #111; margin: 0 0 0.5rem; }
+.emptySub { font-size: 0.9rem; color: #6b7280; margin: 0 0 1.5rem; }
+.shopBtn {
+  padding: 0.7rem 2rem;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.shopBtn:hover { background: #333; }
+
+/* Help section */
+.helpSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.5rem 2.5rem;
+  background: #f9fafb;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.helpText { flex: 1; }
+.helpTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 0.5rem;
+}
+.helpDesc {
+  font-size: 0.87rem;
+  color: #6b7280;
+  margin: 0 0 1rem;
+  line-height: 1.6;
+  max-width: 340px;
+}
+.helpLink {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: #111;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.15s;
+}
+.helpLink:hover { opacity: 0.6; }
+.helpImg {
+  width: 200px;
+  height: 140px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #d1d5db 0%, #9ca3af 100%);
+  flex-shrink: 0;
+  background-image: url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ── Modal ────────────────────────────────────────────────────────────────── */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modalCard {
+  display: flex;
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.25);
+  animation: slideUp 0.25s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Left decorative side */
+.modalLeft {
+  width: 210px;
+  flex-shrink: 0;
+  background: linear-gradient(160deg, #c9b89a 0%, #8b7355 60%, #5c4a2a 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  position: relative;
+}
+.modalLeftInner {
+  position: relative;
+  z-index: 1;
+}
+.modalCuratedBy {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  margin: 0 0 0.3rem;
+}
+.modalBrandName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Right content */
+.modalRight {
+  flex: 1;
+  padding: 2rem 2rem 1.75rem;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.modalClose {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: #6b7280;
+  transition: background 0.15s;
+}
+.modalClose:hover { background: #e5e7eb; color: #111; }
+
+.modalEyebrow {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #9ca3af;
+  text-transform: uppercase;
+  margin: 0 0 0.3rem;
+}
+.modalOrderId {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+/* Modal items */
+.modalItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.modalItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.modalItemImg {
+  width: 60px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #f3f4f6;
+  flex-shrink: 0;
+}
+.modalItemInfo { flex: 1; }
+.modalItemName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 0.25rem;
+}
+.modalItemMeta {
+  font-size: 0.78rem;
+  color: #6b7280;
+  margin: 0;
+}
+.modalItemPrice {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Modal price rows */
+.modalDivider {
+  height: 1px;
+  background: #f3f4f6;
+  margin: 0.75rem 0;
+}
+.modalPriceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.87rem;
+  color: #374151;
+  padding: 0.2rem 0;
+}
+.modalTotal {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #111;
+}
+.free { color: #16a34a; font-weight: 600; }
+
+/* Modal close button */
+.modalCloseBtn {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.85rem;
+  background: #1f2937;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: background 0.18s;
+}
+.modalCloseBtn:hover { background: #111; }
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .orderMetaRight { gap: 1.25rem; }
+  .modalLeft { display: none; }
+  .helpImg { display: none; }
+  .helpSection { padding: 2rem 1.5rem; }
+}

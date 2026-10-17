@@ -1,0 +1,194 @@
+/* ── Carousel shell ──────────────────────────────────────────────────────── */
+.carousel {
+  position: relative;
+  width: calc(100% - 48px);
+  max-width: 1100px;
+  margin: 24px auto 0;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 16 / 7;        /* wide cinematic ratio matching screenshot */
+  background: #1a1a1a;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 700px) {
+  .carousel {
+    aspect-ratio: 4 / 5;       /* portrait on mobile */
+    width: calc(100% - 24px);
+    border-radius: 14px;
+  }
+}
+
+/* ── Track — full-size container for all slides stacked ─────────────────── */
+.track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Individual slide ────────────────────────────────────────────────────── */
+.slide {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.6s ease;
+}
+
+.slideActive {
+  opacity: 1;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.slideHidden {
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Background image */
+.slideImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+/* Gradient overlay — bottom-left heavy so text is always legible */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.35) 55%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+}
+
+/* ── Text content ────────────────────────────────────────────────────────── */
+.content {
+  position: absolute;
+  bottom: 88px;    /* sits above the controls row */
+  left: 48px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 700px) {
+  .content {
+    left: 20px;
+    bottom: 80px;
+  }
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+}
+
+.titleLine {
+  display: block;
+  font-size: clamp(36px, 5.5vw, 72px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+/* CTA button — matches the pill shape in the screenshot */
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.2s, transform 0.15s;
+  letter-spacing: 0.01em;
+}
+
+.ctaBtn:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+/* ── Controls row — dots + arrows at the bottom right ───────────────────── */
+.controls {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Dot indicators */
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s, width 0.25s;
+}
+
+.dotActive {
+  width: 36px;
+  background: #fff;
+}
+
+/* Arrow buttons */
+.arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
