@@ -47,7 +47,6 @@ RUN SECRET_KEY=build-time-dummy \
     RAZORPAY_KEY_SECRET=dummy_key_secret \
     python manage.py collectstatic --noinput
 
-
 EXPOSE 8000
 
 CMD ["gunicorn", "config.wsgi:application", \
@@ -55,8 +54,10 @@ CMD ["gunicorn", "config.wsgi:application", \
     "--workers", "3", \
     "--threads", "2", \
     "--worker-class", "sync", \
+    "--worker-tmp-dir", "/dev/shm", \
     "--timeout", "120", \
     "--keep-alive", "5", \
     "--access-logfile", "-", \
     "--error-logfile", "-", \
     "--log-level", "info"]
+
