@@ -1,3 +1,4 @@
+import ssl
 from .base import * 
 
 DEBUG = False
@@ -59,8 +60,12 @@ else:
     }
 
 
-CELERY_BROKER_URL = env('CELERY_BROKER_URL', default=REDIS_URL)  
-CELERY_RESULT_BACKEND = REDIS_URL
+CELERY_BROKER_URL = env('CELERY_BROKER_URL', default=REDIS_URL)
+CELERY_RESULT_BACKEND = env('CELERY_RESULT_BACKEND', default=REDIS_URL)
+
+
+CELERY_BROKER_USE_SSL = {'ssl_cert_reqs': ssl.CERT_NONE}
+CELERY_REDIS_BACKEND_USE_SSL = {'ssl_cert_reqs': ssl.CERT_NONE}
 
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
