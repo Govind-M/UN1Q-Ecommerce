@@ -56,7 +56,10 @@ USER django
 
 # Collect static files at build time
 # A dummy SECRET_KEY is used only for this step — real key is injected at runtime
-RUN SECRET_KEY=build-time-dummy-key-not-used-in-production \
+RUN SECRET_KEY=build-time-dummy \
+    DATABASE_URL=postgres://dummy:dummy@localhost:5432/dummy \
+    REDIS_URL=redis://localhost:6379/1 \
+    CELERY_BROKER_URL=redis://localhost:6379/0 \
     python manage.py collectstatic --noinput
 
 EXPOSE 8000
