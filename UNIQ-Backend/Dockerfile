@@ -43,7 +43,10 @@ RUN SECRET_KEY=build-time-dummy \
     DATABASE_URL=postgres://dummy:dummy@localhost:5432/dummy \
     REDIS_URL=redis://localhost:6379/1 \
     CELERY_BROKER_URL=redis://localhost:6379/0 \
+    RAZORPAY_KEY_ID=dummy_key_id \
+    RAZORPAY_KEY_SECRET=dummy_key_secret \
     python manage.py collectstatic --noinput
+
 
 EXPOSE 8000
 
