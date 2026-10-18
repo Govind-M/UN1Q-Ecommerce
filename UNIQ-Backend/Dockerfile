@@ -17,11 +17,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy only requirements first (better Docker layer caching)
-COPY requirements/production.txt .
+COPY requirements/ requirements/
 
 # Install Python dependencies
 RUN pip install --no-cache-dir --upgrade pip \
- && pip install --no-cache-dir -r production.txt
+ && pip install --no-cache-dir -r requirements/production.txt
 
 
 # ── Stage 2: Runtime — lean image without build tools ─────────────────────────
