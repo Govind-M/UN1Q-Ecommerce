@@ -15,6 +15,8 @@ import {
   toggleProductStatus,
 } from "../../services/api";
 
+
+
 export const fetchUsersByAdmin = createAsyncThunk(
   "admin/fetchUsers",
   async (_, { rejectWithValue }) => {
@@ -206,22 +208,30 @@ const adminSlice = createSlice({
 
   extraReducers: (builder) => {
     builder
+
       .addCase(fetchUsersByAdmin.pending, (state) => {
         state.usersStatus = "loading";
       })
+      // ✅ FIX: Normalize payload — always store an array
       .addCase(fetchUsersByAdmin.fulfilled, (state, action) => {
         state.usersStatus = "succeeded";
-        state.users = action.payload;
+        state.users = Array.isArray(action.payload)
+          ? action.payload
+          : action.payload?.results ?? [];
       })
       .addCase(fetchUsersByAdmin.rejected, (state) => {
         state.usersStatus = "failed";
       })
+
       .addCase(fetchAdminOrders.pending, (state) => {
         state.ordersStatus = "loading";
       })
+      // ✅ FIX: Normalize payload — always store an array
       .addCase(fetchAdminOrders.fulfilled, (state, action) => {
         state.ordersStatus = "succeeded";
-        state.orders = action.payload;
+        state.orders = Array.isArray(action.payload)
+          ? action.payload
+          : action.payload?.results ?? [];
       })
       .addCase(fetchAdminOrders.rejected, (state) => {
         state.ordersStatus = "failed";
@@ -277,11 +287,17 @@ const adminSlice = createSlice({
   },
 });
 
-export const selectUsersByAdmin = (state) => state.admin.users;
-export const selectAdminOrders = (state) => state.admin.orders;
+// ✅ FIX: Guard selectors — always return an array
+export const selectUsersByAdmin = (state) =>
+  Array.isArray(state.admin.users) ? state.admin.users : [];
+
+export const selectAdminOrders = (state) =>
+  Array.isArray(state.admin.orders) ? state.admin.orders : [];
+
 export const selectAdminProducts = (state) => state.admin.products;
 export const selectProductSearch = (state) => state.admin.productSearchQuery;
 export const selectProductModal = (state) => state.admin.productModal;
+
 export const selectUserSearch = (state) => state.admin.userSearchQuery;
 export const selectOrderSearch = (state) => state.admin.orderSearchQuery;
 
@@ -298,9 +314,7 @@ export const selectOrdersChart = createSelector(
         result[week] = { completed: 0, pending: 0 };
       }
 
-      // Fix: Case-insensitive status match
-      const st = (order.status || "").toLowerCase();
-      if (st === "delivered" || st === "fulfilled") {
+      if (order.status === "Delivered" || order.status === "Fulfilled") {
         result[week].completed++;
       } else {
         result[week].pending++;
@@ -325,9 +339,7 @@ export const selectEarningsChart = createSelector(
       });
 
       if (!result[month]) result[month] = 0;
-
-      // Fix: Parse order.total as Number
-      result[month] += Number(order.total || 0);
+      result[month] += order.total;
     });
 
     return Object.entries(result).map(([month, revenue]) => ({
@@ -342,10 +354,8 @@ export const selectUserOrderStats = createSelector(
   (_, userId) => userId,
   (orders, userId) => {
     const userOrders = orders?.filter((o) => o.userId === userId) || [];
-
-    // Fix: Parse o.total as Number
     const totalContribution = userOrders.reduce(
-      (s, o) => s + Number(o.total || 0),
+      (s, o) => s + (o.total || 0),
       0,
     );
     return {

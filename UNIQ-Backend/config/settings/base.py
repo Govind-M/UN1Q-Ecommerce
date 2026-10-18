@@ -4,26 +4,15 @@ from datetime import timedelta
 import environ
 from celery.schedules import crontab
 from corsheaders.defaults import default_headers
-from django.core.exceptions import ImproperlyConfigured
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 env = environ.Env()
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
-DEBUG = env.bool('DEBUG', default=False)  
- 
-if DEBUG:
-    SECRET_KEY = env('SECRET_KEY', default='dev-only-insecure-key-never-use-in-production')
-else:
-    SECRET_KEY = env('SECRET_KEY')  
- 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1'] if DEBUG else [])
-
-
-
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -32,14 +21,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     'rest_framework',
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
     'django_filters',
     'drf_spectacular',
-    
+
     'common',
     'apps.accounts',
     'apps.catalog',
@@ -81,22 +70,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
-
-DATABASES = {
-    "default": env.db("DATABASE_URL")
-}
-
-
-REDIS_URL = env('REDIS_URL', default='')
-if REDIS_URL:
-    CACHES = {'default': {'BACKEND': 'django.core.cache.backends.redis.RedisCache', 'LOCATION': REDIS_URL}}
-else:
-    CACHES = {'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMemCache'}}
-
-
 AUTH_USER_MODEL = 'accounts.User'
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -113,15 +87,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-
-
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
 
@@ -132,60 +100,16 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
-USE_S3 = env.bool("USE_S3", default=False)
-
-if USE_S3:
-    STORAGES = {
-        "default": {
-            "BACKEND": "storages.backends.s3.S3Storage",
-            "OPTIONS": {
-                "bucket_name": env("AWS_STORAGE_BUCKET_NAME"),
-                "region_name": env("AWS_S3_REGION_NAME"),
-                "location": "media",
-                "file_overwrite": False,
-                "querystring_auth": True,
-                "querystring_expire": 3600,
-            },
-        },
-        "staticfiles": {
-            "BACKEND": (
-                "whitenoise.storage."
-                "CompressedManifestStaticFilesStorage"
-            ),
-        },
-    }
-else:
-    STORAGES = {
-        "default": {
-            "BACKEND": (
-                "django.core.files.storage.FileSystemStorage"
-            ),
-        },
-        "staticfiles": {
-            "BACKEND": (
-                "whitenoise.storage."
-                "CompressedManifestStaticFilesStorage"
-            ),
-        },
-    }
-
-
-
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
 
 
 API_PAGINATE = env.bool('API_PAGINATE', default=False)
 ENABLE_LEGACY_ROOT_ROUTES = env.bool('ENABLE_LEGACY_ROOT_ROUTES', default=True)
 
-
-
-
 REST_FRAMEWORK = {
-    
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
-    
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'apps.accounts.authentication.CustomJWTAuthentication',
     ),
@@ -210,21 +134,32 @@ REST_FRAMEWORK = {
         'payments': '30/min',
     },
 }
+
 if API_PAGINATE:
     REST_FRAMEWORK['DEFAULT_PAGINATION_CLASS'] = 'common.pagination.StandardResultsSetPagination'
 
 
+# ---------------------------------------------------------------------------
+# DRF SPECTACULAR (API DOCS)
+# ---------------------------------------------------------------------------
 SPECTACULAR_SETTINGS = {
     'TITLE': 'UN1Q E-Commerce API',
-    'DESCRIPTION': 'Complete REST API documentation for UN1Q E-Commerce platform including authentication, catalog, cart, orders, and payments.',
+    'DESCRIPTION': (
+        'Complete REST API documentation for UN1Q E-Commerce platform '
+        'including authentication, catalog, cart, orders, and payments.'
+    ),
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     'COMPONENT_SPLIT_REQUEST': True,
 }
 
 
+
+# ---------------------------------------------------------------------------
+# SIMPLE JWT
+# ---------------------------------------------------------------------------
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=env.int('ACCESS_TOKEN_MINUTES', default=60)),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
@@ -232,36 +167,47 @@ SIMPLE_JWT = {
 }
 
 
-from corsheaders.defaults import default_headers
 
+# ---------------------------------------------------------------------------
+# CORS
+# ---------------------------------------------------------------------------
 CORS_ALLOW_ALL_ORIGINS = False
 
+CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS', default=[])
 
-CORS_ALLOWED_ORIGINS = env.list(
-    'CORS_ALLOWED_ORIGINS',
-    default=[],
-)
-
-
-CORS_ALLOW_HEADERS = list(default_headers) + ['x-cart-token', 'idempotency-key', 'x-request-id']
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    'x-cart-token',
+    'idempotency-key',
+    'x-request-id',
+]
 CORS_EXPOSE_HEADERS = ['X-Request-ID']
+
 CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS', default=[])
 
 
+
+# ---------------------------------------------------------------------------
+# BUSINESS SETTINGS
+# ---------------------------------------------------------------------------
 CART_MAX_QTY_PER_ITEM = env.int('CART_MAX_QTY_PER_ITEM', default=10)
 ORDER_PAYMENT_WINDOW_MINUTES = env.int('ORDER_PAYMENT_WINDOW_MINUTES', default=30)
 SHIPPING_FLAT_FEE = env('SHIPPING_FLAT_FEE', default='0')
 FREE_SHIPPING_THRESHOLD = env('FREE_SHIPPING_THRESHOLD', default='0')
 
 
-#Razorpay
+
+# ---------------------------------------------------------------------------
+# RAZORPAY
+# ---------------------------------------------------------------------------
 RAZORPAY_KEY_ID = env('RAZORPAY_KEY_ID', default='')
 RAZORPAY_KEY_SECRET = env('RAZORPAY_KEY_SECRET', default='')
 RAZORPAY_MOCK_MODE = env.bool('RAZORPAY_MOCK_MODE', default=False)
 
 
-#email configuration
 
+# ---------------------------------------------------------------------------
+# EMAIL
+# ---------------------------------------------------------------------------
 EMAIL_BACKEND = env(
     'EMAIL_BACKEND',
     default='django.core.mail.backends.smtp.EmailBackend',
@@ -273,18 +219,23 @@ EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD', default='')
 EMAIL_USE_TLS = env.bool('EMAIL_USE_TLS', default=True)
 EMAIL_USE_SSL = env.bool('EMAIL_USE_SSL', default=False)
 DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL', default='UN1Q Store <noreply@uniq.com>')
-EMAIL_TIMEOUT = 10 
+EMAIL_TIMEOUT = 10
 
 
-# celery
+
+
+# ---------------------------------------------------------------------------
+# CELERY
+# ---------------------------------------------------------------------------
+REDIS_URL = env('REDIS_URL', default='')
 
 CELERY_BROKER_URL = env('CELERY_BROKER_URL', default=REDIS_URL or 'redis://localhost:6379/0')
-
 CELERY_TASK_ALWAYS_EAGER = env.bool('CELERY_ALWAYS_EAGER', default=False)
 CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 CELERY_TASK_ACKS_LATE = True
 CELERY_TASK_TIME_LIMIT = 120
 CELERY_TIMEZONE = TIME_ZONE
+
 CELERY_BEAT_SCHEDULE = {
     'cancel-expired-pending-orders': {
         'task': 'apps.orders.tasks.cancel_expired_pending_orders',
