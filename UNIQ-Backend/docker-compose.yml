@@ -1,0 +1,45 @@
+# =============================================================================
+# UN1Q Backend — Production Docker Compose
+# Usage on EC2:
+#   docker compose build       ← build image
+#   docker compose up -d       ← start all containers
+#   docker compose down        ← stop all containers
+#   docker compose logs -f web ← follow logs
+# =============================================================================
+
+version: '3.9'
+
+services:
+
+  # ── Django Web (Gunicorn) ──────────────────────────────────────────────────
+  web:
+    build: .
+    image: uniq-backend:latest
+    container_name: uniq-web
+    env_file:
+      - /etc/uniq/backend.env      # production env on EC2 server (never in git)
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  # ── Celery Worker ──────────────────────────────────────────────────────────
+  celery_worker:
+    image: uniq-backend:latest     # reuses same image built by web service
+    container_name: uniq-celery-worker
+    env_file:
+      - /etc/uniq/backend.env
+    command: celery -A config worker --loglevel=info --concurrency=2
+    restart: unless-stopped
+    depends_on:
+      - web
+
+  # ── Celery Beat (scheduler) ────────────────────────────────────────────────
+  celery_beat:
+    image: uniq-backend:latest     # reuses same image built by web service
+    container_name: uniq-celery-beat
+    env_file:
+      - /etc/uniq/backend.env
+    command: celery -A config beat --loglevel=info
+    restart: unless-stopped
+    depends_on:
+      - web
