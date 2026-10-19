@@ -18,11 +18,11 @@ const StatCard = ({ icon, label, value, trend, trendUp }) => (
 );
 
 
-const TotalUsersIcon  = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg>;
+const TotalUsersIcon = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg>;
 const ActiveUsersIcon = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>;
-const SuspendedIcon   = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="4.93" y1="4.93" x2="19.07" y2="19.07" /></svg>;
-const OrdersIcon      = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" /><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" /></svg>;
-const EarningsIcon    = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="5" width="20" height="14" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /></svg>;
+const SuspendedIcon = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="4.93" y1="4.93" x2="19.07" y2="19.07" /></svg>;
+const OrdersIcon = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" /><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" /></svg>;
+const EarningsIcon = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="5" width="20" height="14" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /></svg>;
 
 
 const getCurrentAndPrevMonth = () => {
@@ -44,15 +44,15 @@ const calcTrend = (current, previous) => {
 
 const DashboardStats = () => {
 
-  // ✅ FIX: ?? [] ensures we always have an array even if selector returns null/undefined
-  const users  = useSelector(selectUsersByAdmin) ?? [];
-  const orders = useSelector(selectAdminOrders)  ?? [];
+  const users = useSelector(selectUsersByAdmin) ?? [];
+  const orders = useSelector(selectAdminOrders) ?? [];
 
-  const totalUsers  = users.length;
+  const totalUsers = users.length;
   const activeUsers = users.filter((u) => !u.isBlocked).length;
-  const suspended   = users.filter((u) => u.isBlocked).length;
+  const suspended = users.filter((u) => u.isBlocked).length;
   const totalOrders = orders.length;
-  const earnings    = orders.reduce((s, o) => s + (o.total || 0), 0);
+
+  const earnings = orders.reduce((s, o) => s + parseFloat(o.total || 0), 0);
 
 
   const { currentMonth, prevMonth, currentYear } = getCurrentAndPrevMonth();
@@ -67,13 +67,13 @@ const DashboardStats = () => {
     return d.getMonth() === prevMonth;
   });
 
-  const currentMonthEarnings = currentMonthOrders.reduce((s, o) => s + (o.total || 0), 0);
-  const prevMonthEarnings    = prevMonthOrders.reduce((s, o) => s + (o.total || 0), 0);
+  const currentMonthEarnings = currentMonthOrders.reduce((s, o) => s + parseFloat(o.total || 0), 0);
+  const prevMonthEarnings = prevMonthOrders.reduce((s, o) => s + parseFloat(o.total || 0), 0);
 
-  const ordersTrend   = calcTrend(currentMonthOrders.length, prevMonthOrders.length);
+  const ordersTrend = calcTrend(currentMonthOrders.length, prevMonthOrders.length);
   const earningsTrend = calcTrend(currentMonthEarnings, prevMonthEarnings);
 
- 
+
   const stats = [
     {
       icon: <TotalUsersIcon />,
@@ -112,7 +112,7 @@ const DashboardStats = () => {
       label: "EARNINGS",
       value: earnings >= 1000
         ? `₹${(earnings / 1000).toFixed(1)}k`
-        : `₹${earnings}`,
+        : `₹${earnings.toFixed(2)}`,
       trend: earningsTrend?.trend ?? "No prev data",
       trendUp: earningsTrend?.trendUp ?? true,
     },

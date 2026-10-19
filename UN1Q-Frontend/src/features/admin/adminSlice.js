@@ -212,7 +212,6 @@ const adminSlice = createSlice({
       .addCase(fetchUsersByAdmin.pending, (state) => {
         state.usersStatus = "loading";
       })
-      // ✅ FIX: Normalize payload — always store an array
       .addCase(fetchUsersByAdmin.fulfilled, (state, action) => {
         state.usersStatus = "succeeded";
         state.users = Array.isArray(action.payload)
@@ -226,7 +225,6 @@ const adminSlice = createSlice({
       .addCase(fetchAdminOrders.pending, (state) => {
         state.ordersStatus = "loading";
       })
-      // ✅ FIX: Normalize payload — always store an array
       .addCase(fetchAdminOrders.fulfilled, (state, action) => {
         state.ordersStatus = "succeeded";
         state.orders = Array.isArray(action.payload)
@@ -287,7 +285,6 @@ const adminSlice = createSlice({
   },
 });
 
-// ✅ FIX: Guard selectors — always return an array
 export const selectUsersByAdmin = (state) =>
   Array.isArray(state.admin.users) ? state.admin.users : [];
 
@@ -339,7 +336,7 @@ export const selectEarningsChart = createSelector(
       });
 
       if (!result[month]) result[month] = 0;
-      result[month] += order.total;
+      result[month] += parseFloat(order.total || 0);
     });
 
     return Object.entries(result).map(([month, revenue]) => ({
@@ -355,7 +352,7 @@ export const selectUserOrderStats = createSelector(
   (orders, userId) => {
     const userOrders = orders?.filter((o) => o.userId === userId) || [];
     const totalContribution = userOrders.reduce(
-      (s, o) => s + (o.total || 0),
+      (s, o) => s + parseFloat(o.total || 0),
       0,
     );
     return {
